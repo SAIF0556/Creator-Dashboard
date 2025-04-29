@@ -1,0 +1,63 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Custom components */
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+  }
+  
+  .btn-secondary {
+    @apply px-4 py-2 bg-white text-indigo-600 text-sm font-medium rounded-md border border-indigo-300 hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+  }
+  
+  .btn-outline {
+    @apply px-4 py-2 bg-white text-gray-700 text-sm font-medium rounded-md border border-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+  }
+  
+  .input-field {
+    @apply shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md;
+  }
+  
+  .card {
+    @apply bg-white shadow overflow-hidden rounded-lg;
+  }
+  
+  .card-header {
+    @apply px-4 py-5 border-b border-gray-200 sm:px-6;
+  }
+  
+  .card-body {
+    @apply px-4 py-5 sm:p-6;
+  }
+  
+  .card-footer {
+    @apply bg-gray-50 px-4 py-3 border-t border-gray-200 sm:px-6;
+  }
+}
